@@ -11,7 +11,7 @@ jobs:
   
   build:
     name: Build Image    
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-24.04
     env:
       BASE_IMAGE: 'registry.access.redhat.com/ubi9/python-311:latest'
       REGISTRY: quay.io/troyer
@@ -21,7 +21,7 @@ jobs:
     steps:
 
       - name: Checkout
-        uses: actions/checkout@v2
+        uses: actions/checkout@v4
 
       # Setup S2i and Build container image
       - name: Setup and Build
